@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>GhostHunter</title>
-    <style>
-      /* Add some basic styling */
-    </style>
-  </head>
-  <body>
-    <h1>GhostHunting</h1>
-    <p>Domain requests will appear here.</p>
-    <!-- Add more UI elements as needed -->
-  </body>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">    
+</head>
+<body>
+    <div class="container my-3">
+        <div class="text-center">
+            <img src="icons/GhostHunter48x48.png" alt="GhostHunter" style="vertical-align: middle;">
+            <h1 class="d-inline-block align-middle ml-2">GhostHunter</h1>
+        </div>
+        <div class="text-center my-3">
+            <button id="copyButton" class="btn btn-primary">Copy</button>
+        </div>
+        <div id="copyAlert" class="alert alert-success" role="alert" style="display: none;">
+            Copied!
+        </div>
+        <div id="domain-list" class="text-left mt-3"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
 </html>
