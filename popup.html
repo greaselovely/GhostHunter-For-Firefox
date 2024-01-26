@@ -7,12 +7,14 @@
 </head>
 <body>
     <div class="container my-3">
-        <div class="text-center">
+        <div class="text-center mb-3">
             <img src="icons/GhostHunter48x48.png" alt="GhostHunter" style="vertical-align: middle;">
             <h1 class="d-inline-block align-middle ml-2">GhostHunter</h1>
         </div>
         <div class="text-center my-3">
-            <button id="copyButton" class="btn btn-primary">Copy</button>
+            <!-- Inline style for quick testing of spacing -->
+            <button id="clearButton" class="btn btn-danger" style="margin-right: 20px;">Clear</button>
+            <button id="copyButton" class="btn btn-primary" disabled>Copy</button>
         </div>
         <div id="copyAlert" class="alert alert-success" role="alert" style="display: none;">
             Copied!

@@ -4,6 +4,7 @@
   "version": "1.0",
   "description": "Track and log domain requests for a specific tab.",
   "permissions": [
+    "storage",
     "activeTab",
     "tabs",
     "webRequest",
