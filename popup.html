@@ -1,26 +1,44 @@
+<!-- popup.html -->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>GhostHunter</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">    
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/custom.css"> 
 </head>
 <body>
-    <div class="container my-3">
-        <div class="text-center mb-3">
-            <img src="icons/GhostHunter48x48.png" alt="GhostHunter" style="vertical-align: middle;">
-            <h1 class="d-inline-block align-middle ml-2">GhostHunter</h1>
-        </div>
-        <div class="text-center my-3">
-            <!-- Inline style for quick testing of spacing -->
-            <button id="clearButton" class="btn btn-danger" style="margin-right: 20px;">Clear</button>
-            <button id="copyButton" class="btn btn-primary" disabled>Copy</button>
-        </div>
-        <div id="copyAlert" class="alert alert-success" role="alert" style="display: none;">
-            Copied!
-        </div>
-        <div id="domain-list" class="text-left mt-3"></div>
+    <div id="header">
+        <img src="icons/GhostHunter.png" alt="Logo" id="logo">
+        <span id="title">GhostHunter</span>
     </div>
+    <div id="buttons">
+        <button id="clearButton" class="btn btn-outline-primary me-1">Clear</button>
+        <button id="copyButton" class="btn btn-outline-primary me-1">Copy</button>
+        <span id="copy-confirmation" class="copy-confirmation">👍</span>
+    </div>
+    <div id="buttons">
+        <button id="settingsButton" class="btn btn-outline-success me-1">API</button>
+        <button id="uploadButton" class="btn btn-outline-success" disabled>Upload</button>
+        <span id="upload-confirmation" class="upload-confirmation" style="display: none;">👍</span>
+        <span id="upload-no-bueno" class="upload-no-bueno" style="display: none;">&#x1F44E;</span>
+    </div>
+    <div id="apiSettings" style="display:none;">
+        <form>
+            <div class="form-group">
+                <label for="webServerAddress">KineticLull Address:</label><br>
+                <input type="text" id="webServerAddress" class="form-control" placeholder="http://127.0.0.1:8080">
+            </div>
+            <div class="form-group">
+                <label for="apiKeyInput">API Key:</label><br>
+                <input type="text" id="apiKeyInput" class="form-control" placeholder="API Key">
+            </div>
+            <button type="button" id="saveSettings" class="btn btn-outline-primary mt-4">Save</button>
+        </form>
+    </div>
+    <div id="domain-list"></div>
     <script src="popup.js"></script>
 </body>
 </html>
